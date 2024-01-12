@@ -1,6 +1,6 @@
 {
   "name": "directus-ts-schema",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A CLI for generating TypeScript types from Directus schemas",
   "bin": "./build/index.js",
   "keywords": [
