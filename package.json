@@ -1,0 +1,45 @@
+{
+  "name": "directus-ts-schema",
+  "version": "0.0.1",
+  "description": "A CLI for generating TypeScript types from Directus schemas",
+  "bin": "./build/index.js",
+  "keywords": [
+    "directus",
+    "typescript",
+    "types",
+    "codegen",
+    "schema",
+    "cli"
+  ],
+  "type": "module",
+  "author": "bgenia",
+  "license": "MIT",
+  "volta": {
+    "node": "21.5.0"
+  },
+  "scripts": {
+    "lint:tsc": "tsc",
+    "lint:eslint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "lint": "pnpm lint:tsc && pnpm lint:eslint",
+    "build:bundle": "tsup",
+    "build": "pnpm lint && pnpm build:bundle",
+    "prepublishOnly": "pnpm build",
+    "postversion": "git push && git push --tags",
+    "release": "pnpm version -m 'chore(release): %s' --"
+  },
+  "devDependencies": {
+    "@directus/api": "^15.0.0",
+    "eslint": "^8.56.0",
+    "eslint-kit": "^10.7.0",
+    "eslint-plugin-no-relative-import-paths": "^1.5.3",
+    "eslint-plugin-require-node-import-prefix": "^0.0.2",
+    "prettier": "^3.1.1",
+    "tsup": "^8.0.1"
+  },
+  "dependencies": {
+    "cmd-ts": "^0.13.0",
+    "typescript": "^5.3.3",
+    "yaml": "^2.3.4"
+  }
+}
