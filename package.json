@@ -17,6 +17,10 @@
   "volta": {
     "node": "21.5.0"
   },
+  "files": [
+    "readme.md",
+    "build"
+  ],
   "scripts": {
     "lint:tsc": "tsc",
     "lint:eslint": "eslint src",
